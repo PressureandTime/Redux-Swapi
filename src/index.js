@@ -10,7 +10,6 @@ import logger from 'redux-logger';
 import App from './App';
 import rootReducer from './reducers';
 
-
 // needed dependancies
 // applyMiddleware from redux
 // thunk from redux-thunk
@@ -21,7 +20,7 @@ const store = createStore(
   rootReducer,
   {},
   compose(
-    applyMiddleware(thunk),
+    applyMiddleware(thunk, logger),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 

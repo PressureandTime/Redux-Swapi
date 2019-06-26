@@ -9,10 +9,10 @@ const initialState = {
 export const charsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
- return {...state, fetching:true}
+        return {...state, fetching:true}
 
     case SUCCESS_DATA:
-        return {...state, fetching:false, action.payload }
+        return {...state, fetching:false, characters: action.payload }
 
 
     case FAILURE_DATA:
